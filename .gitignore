@@ -15,8 +15,9 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-x64/
-x86/
+[Xx]64/
+[Xx]86/
+[Bb]uild/
 bld/
 [Bb]in/
 [Oo]bj/
@@ -170,7 +171,7 @@ csx/
 ecf/
 rcf/
 
-# Windows Store app package directories and files
+# Windows Store app package directory
 AppPackages/
 BundleArtifacts/
 Package.StoreAssociation.xml
@@ -184,6 +185,7 @@ _pkginfo.txt
 
 # Others
 ClientBin/
+[Ss]tyle[Cc]op.*
 ~$*
 *~
 *.dbmdl
@@ -239,6 +241,10 @@ FakesAssemblies/
 **/*.Server/GeneratedArtifacts
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
+
+# LightSwitch generated files
+GeneratedArtifacts/
+ModelManifest.xml
 
 # Paket dependency manager
 .paket/paket.exe
