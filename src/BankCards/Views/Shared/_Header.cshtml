@@ -3,9 +3,9 @@
     <!-- Logo -->
     <a href="/" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
-        <span class="logo-mini">Cards</span>
+        <span class="logo-mini"><i class="fa fa-bank"></i></span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg">Bank<b>Cards</b></span>
+        <span class="logo-lg"><i class="fa fa-bank"></i> Bank<b>Cards</b></span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
@@ -15,6 +15,7 @@
         </a>
         <!-- Navbar Right Menu -->
         <div class="navbar-custom-menu">
+            @await Html.PartialAsync("_LoginPartial")
             <ul class="nav navbar-nav">
                 <!-- Control Sidebar Toggle Button -->
                 <li>
