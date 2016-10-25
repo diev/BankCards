@@ -100,10 +100,10 @@ desired effect
     <!-- SlimScroll -->
     <script src="~/lib/adminlte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
     <!-- FastClick -->
-    <script src="~/lib/adminlte/plugins/fastclick/fastclick.js"></script>
+    <script src="~/lib/adminlte/plugins/fastclick/fastclick.min.js"></script>
 
     <!-- date-range-picker -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+    <script src="~/lib/adminlte/plugins/daterangepicker/moment.min.js"></script>
     <script src="~/lib/adminlte/plugins/daterangepicker/daterangepicker.js"></script>
 
     <!-- page script -->
@@ -112,20 +112,58 @@ desired effect
             $("#example1").DataTable();
         });
 
+        // http://www.daterangepicker.com/
         $('#daterange-btn').daterangepicker({
-            ranges: {
-                'Today': [moment(), moment()],
-                'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-                'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-                'Last 30 Days': [moment().subtract(29, 'days'), moment()],
-                'This Month': [moment().startOf('month'), moment().endOf('month')],
-                'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            "showDropdowns": true,
+            "ranges": {
+                "Сегодня": [moment(), moment()],
+                "Вчера": [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                "За 7 дней": [moment().subtract(6, 'days'), moment()],
+                "За 30 дней": [moment().subtract(29, 'days'), moment()],
+                "Этот месяц": [moment().startOf('month'), moment().endOf('month')],
+                "Прошлый месяц": [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
             },
-            startDate: moment().subtract(29, 'days'),
-            endDate: moment()
+            "locale": {
+                "format": "DD.MM.YYYY",
+                "separator": " - ",
+                "applyLabel": "ОК",
+                "cancelLabel": "Отмена",
+                "fromLabel": "С",
+                "toLabel": "по",
+                "customRangeLabel": "За период",
+                "weekLabel": "W",
+                "daysOfWeek": [
+                    "Вс",
+                    "Пн",
+                    "Вт",
+                    "Ср",
+                    "Чт",
+                    "Пт",
+                    "Сб"
+                ],
+                "monthNames": [
+                    "Январь",
+                    "Февраль",
+                    "Март",
+                    "Апрель",
+                    "Май",
+                    "Июнь",
+                    "Июль",
+                    "Август",
+                    "Сентябрь",
+                    "Октябрь",
+                    "Ноябрь",
+                    "Декабрь"
+                ],
+                "firstDay": 1
+            },
+            "linkedCalendars": false,
+            "autoUpdateInput": false,
+            "startDate": moment().subtract(6, 'days'),
+            "endDate": moment()
         },
         function (start, end) {
-            $('#daterange-btn span').html(start.format('D MMMM YYYY') + ' - ' + end.format('D MMMM YYYY'));
+            $('#daterange-btn span').html('<i class="fa fa-calendar"></i> ' + start.format('DD.MM.YYYY') + ' - ' + end.format('DD.MM.YYYY'));
         });
     </script>
 
