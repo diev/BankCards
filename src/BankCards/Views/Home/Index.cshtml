@@ -1,5 +1,6 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Выписка";
+    ViewData["Description"] = "Проведенные по картсчету операции";
 }
 
 <!--
@@ -109,453 +110,1032 @@
     </div>
 </div>
 -->
+
 <!-- DEMO DATA -->
+<div class="row no-print">
+    <div class="col-xs-12">
+        <div class="input-group">
+            <button type="button" class="btn btn-default pull-right" id="daterange-btn">
+                <span>
+                    <i class="fa fa-calendar"></i> Выберите период
+                </span>
+                <i class="fa fa-caret-down"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-xs-12">
         <div class="box">
+            <!--
             <div class="box-header">
-                <h3 class="box-title">Data Table With Full Features</h3>
-                <div class="box-body">
-                    <div class="input-group">
-                        <button type="button" class="btn btn-default pull-right" id="daterange-btn">
-                            <span>
-                                <i class="fa fa-calendar"></i> Date range picker
-                            </span>
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                    </div>
-                </div>
+                <h3 class="box-title">Проведенные по картсчету операции</h3>
+            </div>
+            -->
             <!-- /.box-header -->
+            <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                         <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
+                            <th>Дата</th>
+                            <th>Приход</th>
+                            <th>Расход</th>
+                            <th>Описание операции</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Trident</td>
                             <td>
-                                Internet
-                                Explorer 4.0
+                                01.07.2014
                             </td>
-                            <td>Win 95+</td>
-                            <td> 4</td>
-                            <td>X</td>
-                        </tr>
-                        <tr>
-                            <td>Trident</td>
+                            <td></td>
                             <td>
-                                Internet
-                                Explorer 5.0
+                                5 181.00
                             </td>
-                            <td>Win 95+</td>
-                            <td>5</td>
-                            <td>C</td>
-                        </tr>
-                        <tr>
-                            <td>Trident</td>
                             <td>
-                                Internet
-                                Explorer 5.5
+                                Покупка. 26.06.14 22:51:44. Карта *1234. Сумма 5 181.00 RUR.<br>Место MARY KAY ECOMM ON US 24D SMOLNAY MOSKVA RUS
                             </td>
-                            <td>Win 95+</td>
-                            <td>5.5</td>
-                            <td>A</td>
                         </tr>
                         <tr>
-                            <td>Trident</td>
                             <td>
-                                Internet
-                                Explorer 6
+                                01.07.2014
                             </td>
-                            <td>Win 98+</td>
-                            <td>6</td>
-                            <td>A</td>
+                            <td></td>
+                            <td>
+                                250.00
+                            </td>
+                            <td>
+                                Покупка. 29.06.14 01:06:48. Карта *1234. Сумма 250.00 RUR.<br>Место SEVERO-ZAPADNYJ FILIAL SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Trident</td>
-                            <td>Internet Explorer 7</td>
-                            <td>Win XP SP2+</td>
-                            <td>7</td>
-                            <td>A</td>
+                            <td>
+                                02.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 277.68
+                            </td>
+                            <td>
+                                Покупка. 29.06.14 22:16:48. Карта *2345. Сумма 1 277.68 RUR.<br>Место LUKOIL AZK 159 ORDJONIKID SAINT PETERSB RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Trident</td>
-                            <td>AOL browser (AOL desktop)</td>
-                            <td>Win XP</td>
-                            <td>6</td>
-                            <td>A</td>
+                            <td>
+                                04.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                Покупка. 02.07.14 03:09:47. Карта *1234. Сумма 500.00 RUR.<br>Место SEVERO-ZAPADNYJ FILIAL SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Firefox 1.0</td>
-                            <td>Win 98+ / OSX.2+</td>
-                            <td>1.7</td>
-                            <td>A</td>
+                            <td>
+                                04.07.2014
+                            </td>
+                            <td>
+                                10 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Firefox 1.5</td>
-                            <td>Win 98+ / OSX.2+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 200.00
+                            </td>
+                            <td>
+                                Покупка. 02.07.14 20:50:32. Карта *2345. Сумма 1 200.00 RUR.<br>Место PODOROZHNIK ZVEZDNAYA, 3  ST PETERSBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Firefox 2.0</td>
-                            <td>Win 98+ / OSX.2+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 244.50
+                            </td>
+                            <td>
+                                Покупка. 03.07.14 18:43:45. Карта *1234. Сумма 1 244.50 RUR.<br>Место WWW.RZD.RU 37A 1, NOVAYA BASMANN MOSCOW RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Firefox 3.0</td>
-                            <td>Win 2k+ / OSX.3+</td>
-                            <td>1.9</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 294.90
+                            </td>
+                            <td>
+                                Покупка. 03.07.14 18:45:30. Карта *1234. Сумма 1 294.90 RUR.<br>Место WWW.RZD.RU 37A 1, NOVAYA BASMANN MOSCOW RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Camino 1.0</td>
-                            <td>OSX.2+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 792.10
+                            </td>
+                            <td>
+                                Покупка. 03.07.14 20:45:42. Карта *1234. Сумма 1 792.10 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Camino 1.5</td>
-                            <td>OSX.3+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                99.00
+                            </td>
+                            <td>
+                                Покупка. 04.07.14 00:00:00. Карта *2345. Сумма 99.00 RUR.<br>Место ITUNES.COM BILL 31-33 RUE SA ITUNES.COM LUX
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Netscape 7.2</td>
-                            <td>Win 95+ / Mac OS 8.6-9.2</td>
-                            <td>1.7</td>
-                            <td>A</td>
+                            <td>
+                                07.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                316.00
+                            </td>
+                            <td>
+                                Покупка. 04.07.14 19:34:01. Карта *1234. Сумма 316.00 RUR.<br>Место BYSHE 97A LENSOVETA ST ST PETERBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Netscape Browser 8</td>
-                            <td>Win 98SE+</td>
-                            <td>1.7</td>
-                            <td>A</td>
+                            <td>
+                                08.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                39.00
+                            </td>
+                            <td>
+                                Покупка. 06.07.14 00:00:00. Карта *2345. Сумма 39.00 RUR.<br>Место ITUNES.COM BILL 31-33 RUE SA ITUNES.COM LUX
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Netscape Navigator 9</td>
-                            <td>Win 98+ / OSX.2+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                09.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 021.00
+                            </td>
+                            <td>
+                                Покупка. 05.07.14 18:11:48. Карта *1234. Сумма 2 021.00 RUR.<br>Место IKEA DOM 5 CASH LINE ST PETERSBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.0</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1</td>
-                            <td>A</td>
+                            <td>
+                                09.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 182.00
+                            </td>
+                            <td>
+                                Покупка. 05.07.14 18:18:07. Карта *1234. Сумма 2 182.00 RUR.<br>Место IKEA DOM 5 SWEDISH ST PETERSBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.1</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.1</td>
-                            <td>A</td>
+                            <td>
+                                09.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                737.79
+                            </td>
+                            <td>
+                                Покупка. 06.07.14 21:00:51. Карта *2345. Сумма 737.79 RUR.<br>Место LUKOIL AZK 159 ORDJONIKID SAINT PETERSB RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.2</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.2</td>
-                            <td>A</td>
+                            <td>
+                                10.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 250.00
+                            </td>
+                            <td>
+                                Покупка. 05.07.14 16:08:38. Карта *2345. Сумма 1 250.00 RUR.<br>Место APELSIN SHOP PULKOVSKAYA S SANKT-PETERS RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.3</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.3</td>
-                            <td>A</td>
+                            <td>
+                                10.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 520.00
+                            </td>
+                            <td>
+                                Покупка. 08.07.14 18:11:44. Карта *1234. Сумма 1 520.00 RUR.<br>Место STOCKMANN NEVSKIY TCEN ST PETERBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.4</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.4</td>
-                            <td>A</td>
+                            <td>
+                                10.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 615.20
+                            </td>
+                            <td>
+                                Покупка. 08.07.14 20:02:14. Карта *2345. Сумма 56.00 EUR.<br>Место ANDRIANI DONNA VIA XX SETTEMBRE TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.5</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.5</td>
-                            <td>A</td>
+                            <td>
+                                11.07.2014
+                            </td>
+                            <td>
+                                70 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.6</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>1.6</td>
-                            <td>A</td>
+                            <td>
+                                14.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                370.00
+                            </td>
+                            <td>
+                                Покупка. 11.07.14 00:34:11. Карта *2345. Сумма 370.00 RUR.<br>Место SEVERO-ZAPADNYJ FILIAL SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.7</td>
-                            <td>Win 98+ / OSX.1+</td>
-                            <td>1.7</td>
-                            <td>A</td>
+                            <td>
+                                14.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 172.65
+                            </td>
+                            <td>
+                                Покупка. 11.07.14 17:55:00. Карта *2345. Сумма 24.95 EUR.<br>Место INTIMISSIMI 241 VIA D'AQUINO 16 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Mozilla 1.8</td>
-                            <td>Win 98+ / OSX.1+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                14.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                12 925.00
+                            </td>
+                            <td>
+                                Покупка. 11.07.14 19:35:43. Карта *2345. Сумма 275.00 EUR.<br>Место ANDRIANI DONNA VIA XX SETTEMBRE TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Seamonkey 1.1</td>
-                            <td>Win 98+ / OSX.2+</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                16.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                22 093.19
+                            </td>
+                            <td>
+                                Покупка. 11.07.14 00:00:00. Карта *1234. Сумма 637.61 USD.<br>Место RYANAIR RYANAIR FINANCE DEPARTME DUBLIN IRL
+                            </td>
                         </tr>
                         <tr>
-                            <td>Gecko</td>
-                            <td>Epiphany 2.20</td>
-                            <td>Gnome</td>
-                            <td>1.8</td>
-                            <td>A</td>
+                            <td>
+                                16.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 669.64
+                            </td>
+                            <td>
+                                Покупка. 13.07.14 15:44:00. Карта *2345. Сумма 35.60 EUR.<br>Место JEANS BAROCCO VIA VITTORIO EMANUE LECCE ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>Safari 1.2</td>
-                            <td>OSX.3</td>
-                            <td>125.5</td>
-                            <td>A</td>
+                            <td>
+                                17.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 783.50
+                            </td>
+                            <td>
+                                Покупка. 15.07.14 19:57:40. Карта *1234. Сумма 2 783.50 RUR.<br>Место STOCKMANN NEVSKIY TCEN ST PETERBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>Safari 1.3</td>
-                            <td>OSX.3</td>
-                            <td>312.8</td>
-                            <td>A</td>
+                            <td>
+                                18.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                283.00
+                            </td>
+                            <td>
+                                Покупка. 15.07.14 10:34:57. Карта *1234. Сумма 283.00 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>Safari 2.0</td>
-                            <td>OSX.4+</td>
-                            <td>419.3</td>
-                            <td>A</td>
+                            <td>
+                                18.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                230.80
+                            </td>
+                            <td>
+                                Покупка. 15.07.14 11:35:57. Карта *1234. Сумма 230.80 RUR.<br>Место NETTO-16 UL. STREMYANNAYA SANKT-PETERSB RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>Safari 3.0</td>
-                            <td>OSX.4+</td>
-                            <td>522.1</td>
-                            <td>A</td>
+                            <td>
+                                21.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                665.85
+                            </td>
+                            <td>
+                                Покупка. 17.07.14 20:25:00. Карта *2345. Сумма 13.93 EUR.<br>Место COIN 642 VIA DI PALMA 88 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>OmniWeb 5.5</td>
-                            <td>OSX.4+</td>
-                            <td>420</td>
-                            <td>A</td>
+                            <td>
+                                22.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                342.70
+                            </td>
+                            <td>
+                                Покупка. 19.07.14 19:59:34. Карта *2345. Сумма 7.23 EUR.<br>Место MAXI SIDIS VIA ACCLAVIO, 9 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>iPod Touch / iPhone</td>
-                            <td>iPod</td>
-                            <td>420.1</td>
-                            <td>A</td>
+                            <td>
+                                22.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                170.00
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 03:21:52. Карта *2345. Сумма 170.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Webkit</td>
-                            <td>S60</td>
-                            <td>S60</td>
-                            <td>413</td>
-                            <td>A</td>
+                            <td>
+                                22.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                325.00
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 04:44:18. Карта *2345. Сумма 325.00 RUR.<br>Место ROSTELECOM_AUTO GONCHARNAYA MOSKVA RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 7.0</td>
-                            <td>Win 95+ / OSX.1+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                22.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                240.00
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 05:03:05. Карта *2345. Сумма 240.00 RUR.<br>Место ROSTELECOM_AUTO GONCHARNAYA MOSKVA RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 7.5</td>
-                            <td>Win 95+ / OSX.2+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                23.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                609.53
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 01:37:00. Карта *2345. Сумма 12.90 EUR.<br>Место IPERCOOP LA MONGOLIERA VIA PER TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 8.0</td>
-                            <td>Win 95+ / OSX.2+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                23.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                402.57
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 21:05:00. Карта *2345. Сумма 8.52 EUR.<br>Место IPERCOOP LA MONGOLIERA VIA PER TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 8.5</td>
-                            <td>Win 95+ / OSX.2+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                23.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                544.00
+                            </td>
+                            <td>
+                                Покупка. 20.07.14 22:58:43. Карта *1234. Сумма 544.00 RUR.<br>Место SPAR 14 PULKOVSKAYA STR B SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 9.0</td>
-                            <td>Win 95+ / OSX.3+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                23.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                8 641.00
+                            </td>
+                            <td>
+                                Покупка. 21.07.14 21:23:47. Карта *1234. Сумма 8 641.00 RUR.<br>Место IKEA DOM 5 CASH LINE ST PETERSBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 9.2</td>
-                            <td>Win 88+ / OSX.3+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                23.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 298.00
+                            </td>
+                            <td>
+                                Покупка. 21.07.14 21:29:44. Карта *1234. Сумма 1 298.00 RUR.<br>Место IKEA DOM 5 SWEDISH ST PETERSBURG RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera 9.5</td>
-                            <td>Win 88+ / OSX.3+</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                24.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                250.00
+                            </td>
+                            <td>
+                                Покупка. 22.07.14 02:35:51. Карта *1234. Сумма 250.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Opera for Wii</td>
-                            <td>Wii</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                25.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                7 735.42
+                            </td>
+                            <td>
+                                Покупка. 17.07.14 15:54:36. Карта *1234. Сумма 7 735.42 RUR.<br>Место HOTELBOOK-SERVICE SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Nokia N800</td>
-                            <td>N800</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                28.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                Покупка. 25.07.14 16:22:00. Карта *1234. Сумма 500.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Presto</td>
-                            <td>Nintendo DS browser</td>
-                            <td>Nintendo DS</td>
-                            <td>8.5</td>
-                            <td>C/A<sup>1</sup></td>
+                            <td>
+                                29.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                650.00
+                            </td>
+                            <td>
+                                Покупка. 25.07.14 11:38:11. Карта *1234. Сумма 650.00 RUR.<br>Место CAMAIEU 65 NEVSKIY PR STPETE RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>KHTML</td>
-                            <td>Konqureror 3.1</td>
-                            <td>KDE 3.1</td>
-                            <td>3.1</td>
-                            <td>C</td>
+                            <td>
+                                29.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                3 255.16
+                            </td>
+                            <td>
+                                Покупка. 26.07.14 10:55:42. Карта *1234. Сумма 3 255.16 RUR.<br>Место METRO CASH &amp; CARRY TC SANKT-PETERS RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>KHTML</td>
-                            <td>Konqureror 3.3</td>
-                            <td>KDE 3.3</td>
-                            <td>3.3</td>
-                            <td>A</td>
+                            <td>
+                                30.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                205.65
+                            </td>
+                            <td>
+                                Покупка. 26.07.14 09:19:32. Карта *2345. Сумма 4.28 EUR.<br>Место MAXI SIDIS VIA ACCLAVIO, 9 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>KHTML</td>
-                            <td>Konqureror 3.5</td>
-                            <td>KDE 3.5</td>
-                            <td>3.5</td>
-                            <td>A</td>
+                            <td>
+                                30.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                457.92
+                            </td>
+                            <td>
+                                Покупка. 26.07.14 20:11:50. Карта *2345. Сумма 9.53 EUR.<br>Место MAXI SIDIS VIA ACCLAVIO, 9 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Tasman</td>
-                            <td>Internet Explorer 4.5</td>
-                            <td>Mac OS 8-9</td>
-                            <td>-</td>
-                            <td>X</td>
+                            <td>
+                                30.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                3 579.73
+                            </td>
+                            <td>
+                                Покупка. 28.07.14 20:53:35. Карта *2345. Сумма 74.50 EUR.<br>Место SALMOIRAGHI &amp; VIGANO' VIA DI PA TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Tasman</td>
-                            <td>Internet Explorer 5.1</td>
-                            <td>Mac OS 7.6-9</td>
-                            <td>1</td>
-                            <td>C</td>
+                            <td>
+                                31.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                8 177.00
+                            </td>
+                            <td>
+                                Покупка. 29.07.14 14:52:12. Карта *1234. Сумма 8 177.00 RUR.<br>Место WWW.RZD.RU 37A 1, NOVAYA BASMANN MOSCOW RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Tasman</td>
-                            <td>Internet Explorer 5.2</td>
-                            <td>Mac OS 8-X</td>
-                            <td>1</td>
-                            <td>C</td>
+                            <td>
+                                31.07.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 240.61
+                            </td>
+                            <td>
+                                Покупка. 29.07.14 20:59:50. Карта *2345. Сумма 25.90 EUR.<br>Место INUA VIA CATALDO NITTI 28 A TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.1</td>
-                            <td>Embedded devices</td>
-                            <td>-</td>
-                            <td>C</td>
+                            <td>
+                                01.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                225.58
+                            </td>
+                            <td>
+                                Покупка. 30.07.14 12:48:13. Карта *2345. Сумма 4.68 EUR.<br>Место MAXI SIDIS VIA ACCLAVIO, 9 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>NetFront 3.4</td>
-                            <td>Embedded devices</td>
-                            <td>-</td>
-                            <td>A</td>
+                            <td>
+                                01.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 123.00
+                            </td>
+                            <td>
+                                Покупка. 30.07.14 20:13:21. Карта *1234. Сумма 1 123.00 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>Dillo 0.8</td>
-                            <td>Embedded devices</td>
-                            <td>-</td>
-                            <td>X</td>
+                            <td>
+                                04.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 846.75
+                            </td>
+                            <td>
+                                Покупка. 31.07.14 01:05:00. Карта *2345. Сумма 59.00 EUR.<br>Место MARELLA VIA DE CESARE 30  32 TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>Links</td>
-                            <td>Text only</td>
-                            <td>-</td>
-                            <td>X</td>
+                            <td>
+                                04.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                3 860.00
+                            </td>
+                            <td>
+                                Покупка. 31.07.14 16:39:17. Карта *2345. Сумма 80.00 EUR.<br>Место AIELLO MANAGEMENT SRL 106 S. S. TARANTO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>Lynx</td>
-                            <td>Text only</td>
-                            <td>-</td>
-                            <td>X</td>
+                            <td>
+                                04.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                5 693.50
+                            </td>
+                            <td>
+                                Покупка. 01.08.14 19:15:02. Карта *2345. Сумма 118.00 EUR.<br>Место PROGETTO SRL VIA POTIRI 2 VIBO VALENTIA ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>IE Mobile</td>
-                            <td>Windows Mobile 6</td>
-                            <td>-</td>
-                            <td>C</td>
+                            <td>
+                                05.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                Покупка. 02.08.14 03:05:48. Карта *1234. Сумма 500.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
                         </tr>
                         <tr>
-                            <td>Misc</td>
-                            <td>PSP browser</td>
-                            <td>PSP</td>
-                            <td>-</td>
-                            <td>C</td>
+                            <td>
+                                05.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 362.02
+                            </td>
+                            <td>
+                                Покупка. 02.08.14 13:00:00. Карта *2345. Сумма 28.17 EUR.<br>Место MARKET FRATELLI CO 562 VIA NAZION PIZZO ITA
+                            </td>
                         </tr>
                         <tr>
-                            <td>Other browsers</td>
-                            <td>All others</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>U</td>
+                            <td>
+                                06.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                Покупка. 04.08.14 10:22:19. Карта *2345. Сумма 500.00 RUR.<br>Место PODOROZHNIK ZVEZDNAYA, 3  ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                07.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 052.00
+                            </td>
+                            <td>
+                                Покупка. 05.08.14 19:43:58. Карта *1234. Сумма 1 052.00 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                370.00
+                            </td>
+                            <td>
+                                Покупка. 07.08.14 12:00:21. Карта *2345. Сумма 370.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                600.00
+                            </td>
+                            <td>
+                                Покупка. 10.08.14 20:03:26. Карта *1234. Сумма 600.00 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                13.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 899.00
+                            </td>
+                            <td>
+                                Покупка. 10.08.14 19:50:55. Карта *2345. Сумма 1 899.00 RUR.<br>Место PULL AND BEAR SNG 15 ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                13.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 149.20
+                            </td>
+                            <td>
+                                Покупка. 10.08.14 20:12:34. Карта *2345. Сумма 1 149.20 RUR.<br>Место LUKOIL AZK 159 ORDJONIKID SAINT PETERSB RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                14.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                398.90
+                            </td>
+                            <td>
+                                Покупка. 12.08.14 20:59:25. Карта *1234. Сумма 398.90 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                15.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                760.00
+                            </td>
+                            <td>
+                                Покупка. 11.08.14 16:51:43. Карта *1234. Сумма 760.00 RUR.<br>Место YUZHNYY DVOR 19 PUSHKINSK SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                18.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 000.00
+                            </td>
+                            <td>
+                                Покупка. 13.08.14 19:05:00. Карта *2345. Сумма 1 000.00 RUR.<br>Место PODOROZHNIK PR.CHERNYSHEV ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                18.08.2014
+                            </td>
+                            <td>
+                                10 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                19.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                500.00
+                            </td>
+                            <td>
+                                Покупка. 16.08.14 18:42:31. Карта *1234. Сумма 500.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                19.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                856.79
+                            </td>
+                            <td>
+                                Покупка. 17.08.14 12:48:20. Карта *2345. Сумма 856.79 RUR.<br>Место PRISMA SHOP ZVYOZDNAYA STR SANKT-PETERS RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                752.00
+                            </td>
+                            <td>
+                                Покупка. 15.08.14 11:31:45. Карта *1234. Сумма 752.00 RUR.<br>Место APTEKA 127 ZVEZDNAYA ST, ST.-PETERSBUR RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                135.00
+                            </td>
+                            <td>
+                                Покупка. 17.08.14 15:53:31. Карта *2345. Сумма 135.00 RUR.<br>Место PROSTO VKUSNO UL PULKOVSK ST.PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                550.00
+                            </td>
+                            <td>
+                                Покупка. 17.08.14 16:58:45. Карта *2345. Сумма 550.00 RUR.<br>Место PROSTO VKUSNO UL PULKOVSK ST.PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                250.00
+                            </td>
+                            <td>
+                                Покупка. 18.08.14 02:51:33. Карта *1234. Сумма 250.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                20.08.2014
+                            </td>
+                            <td>
+                                10 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                21.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 000.00
+                            </td>
+                            <td>
+                                Покупка. 18.08.14 10:05:33. Карта *2345. Сумма 1 000.00 RUR.<br>Место PODOROZHNIK ZVEZDNAYA, 3  ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                21.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                2 217.60
+                            </td>
+                            <td>
+                                Покупка. 19.08.14 14:55:05. Карта *1234. Сумма 2 217.60 RUR.<br>Место WWW.RZD.RU 37A 1, NOVAYA BASMANN MOSCOW RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                22.08.2014
+                            </td>
+                            <td>
+                                70 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                22.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                800.00
+                            </td>
+                            <td>
+                                Покупка. 19.08.14 18:37:35. Карта *1234. Сумма 800.00 RUR.<br>Место OOO "GLOBUS" NEVSKIY PR., ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                22.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                325.00
+                            </td>
+                            <td>
+                                Покупка. 20.08.14 04:44:25. Карта *2345. Сумма 325.00 RUR.<br>Место ROSTELECOM_AUTO GONCHARNAYA MOSKVA RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                22.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                240.00
+                            </td>
+                            <td>
+                                Покупка. 20.08.14 05:03:14. Карта *2345. Сумма 240.00 RUR.<br>Место ROSTELECOM_AUTO GONCHARNAYA MOSKVA RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                25.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                715.00
+                            </td>
+                            <td>
+                                Покупка. 20.08.14 16:56:11. Карта *1234. Сумма 715.00 RUR.<br>Место OOO "GLOBUS" NEVSKIY PR., ST PETERSBURG RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                25.08.2014
+                            </td>
+                            <td>
+                                15 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                26.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                170.00
+                            </td>
+                            <td>
+                                Покупка. 23.08.14 04:07:09. Карта *2345. Сумма 170.00 RUR.<br>Место MEGAFON TOP UP PAYMENT SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                29.08.2014
+                            </td>
+                            <td></td>
+                            <td>
+                                1 750.00
+                            </td>
+                            <td>
+                                Покупка. 26.08.14 09:13:05. Карта *2345. Сумма 1 750.00 RUR.<br>Место RESPB OD 17 VITEBSKIY PR- SANKT-PETERBU RUS
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                29.08.2014
+                            </td>
+                            <td>
+                                20 000.00
+                            </td>
+                            <td></td>
+                            <td>
+                                <div>Внесение на картсчет.</div>
+                            </td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
-                            <th>Rendering engine</th>
-                            <th>Browser</th>
-                            <th>Platform(s)</th>
-                            <th>Engine version</th>
-                            <th>CSS grade</th>
+                            <th>Дата</th>
+                            <th>Приход</th>
+                            <th>Расход</th>
+                            <th>Описание операции</th>
                         </tr>
                     </tfoot>
                 </table>
@@ -564,16 +1144,15 @@
         </div>
         <!-- /.box -->
     </div>
-    <!-- /.col -->
-</div>
-<!-- /.row -->
-
-<!-- this row will not appear when printing -->
-<div class="row no-print">
-    <div class="col-xs-12">
-        <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-        <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
-            <i class="fa fa-download"></i> Generate PDF
-        </button>
+        <!-- /.col -->
     </div>
-</div>
+    <!-- /.row -->
+    <!-- this row will not appear when printing -->
+    <div class="row no-print">
+        <div class="col-xs-12">
+            <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+            <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+                <i class="fa fa-download"></i> Generate PDF
+            </button>
+        </div>
+    </div>
