@@ -34,3 +34,7 @@ before_package:
     echo http://%APPVEYOR_ACCOUNT_NAME%.github.io/%APPVEYOR_PROJECT_NAME% >>readme.txt
 after_build:
 - cmd: 7z a %APPVEYOR_PROJECT_NAME%-v%APPVEYOR_BUILD_VERSION%.zip readme.txt
+
+only_commits:
+  files:
+    - src/
