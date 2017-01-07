@@ -1,6 +1,8 @@
 BankCards
 =========
 
+[![Build status](https://ci.appveyor.com/api/projects/status/iktx7w5e5sewgofb?svg=true)](https://ci.appveyor.com/project/diev/bankcards)
+
 Информационная система для получения информации о состоянии банковских 
 карточек и счетов через Интернет, а также система администрирования в 
 Интранет: ASP.NET, C#, SQL.
